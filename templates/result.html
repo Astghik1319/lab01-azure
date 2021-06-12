@@ -1,0 +1,8 @@
+{% extends "login.html" %} 
+{% block content %} 
+{% for result in data %}
+ <p>{{result.name }} napisał {{result.text }} </p> 
+{% else %}
+ <p>Brak wpisów </p>
+{% endfor %}
+{% endblock %}

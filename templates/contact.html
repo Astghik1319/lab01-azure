@@ -2,15 +2,63 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+     crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+     crossorigin="anonymous"></script>
+     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
     <title>Contact</title>
 </head>
 <body>
-
-
-
-<p style="color:purple"><a href="mailto:annamatyjewicz@gmail.com">Napisz do mnie</a><br>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Nawigacja</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="../templates/index.html">Home</a>
+        <a class="nav-link" href="../templates/aboutme.html">About</a>
+        <a class="nav-link" href="../templates/gallery.html">Gallery</a>
+        <a class="nav-link" href="../templates/contact.html">Contact</a>
+        <a class="nav-link" href="#">Guestbook</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container">
+<h1>Contact</h1>
+<p><a href="mailto:annamatyjewicz@gmail.com">Napisz do mnie</a><br>
 A numeru telefonu nie podam, bo nie chcę dostawać spamu :)
 </p>
+<p><a href="https://github.com/Astghik1319">Kliknij tutaj</a>, aby przejść do mojego GitHuba</p>
+<p><a href="../templates/guestbook.html">Kliknij tutaj</a>, aby przejść do Księgi Gości</p>
 
+
+	<div class="jumbotron">
+	<h1>Wyślij wiadomość</h1>
+	<p>Napisz do mnie!</p>
+	</div>
+	<form action="/api/send_mail" method="post">
+	<div class="form-group">
+	<label for="InputNickname">Nick</label>
+	<input type="text" class="form-control" name="nick" placeholder="Podaj swój nick" required>
+	</div>
+	<div class="form-group">
+	<label for="InputEmail">Email</label>
+	<input type="email" class="form-control" name="email" placeholder="Podaj adres email" required>
+	</div>
+	<div class="form-group">
+	<label for="InputMess">Wiadomość</label>
+	<input type="text" class="form-control" name="message" placeholder="Podaj treść wiadomości" required>
+	</div>
+	<button type="submit" class="btn btn-default">Submit</button>
+</div>
 </body>
 </html>

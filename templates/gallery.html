@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+     crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+     crossorigin="anonymous"></script>
+     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
     <title>Gallery</title>
 </head>
 <body>
-<h3>Pestka</h3>
-<img src="../static/cat.jpg" width="300" height="300" alt="Pestka">
-<h4>
-</h4>
-<h3>Krysia</h3>
-<img src="../static/krysia.jpg" width="300" height="300" alt="Krysia">
-<h4>
-</h4>
-<h3>Gniewko</h3>
-<h5>(syn Krysi)</h5>
-<img src="../static/gniewko.jpg" width="300" height="300" alt="Gniewko">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Nawigacja</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="../templates/index.html">Home</a>
+        <a class="nav-link" href="../templates/aboutme.html">About</a>
+        <a class="nav-link" href="../templates/gallery.html">Gallery</a>
+        <a class="nav-link" href="../templates/contact.html">Contact</a>
+        <a class="nav-link" href="#">Guestbook</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container">
+<div class="img-container mt-5">
+<a href="../static/cat.jpg" class="data-toggle="lightbox" data-gallery="gallery">
+<img src="../static/cat.jpg" width="300" height="300" alt="Pestka" class="img-fluid" /></a>
+
+<a href="../static/krysia.jpg" class="data-toggle="lightbox" data-gallery="gallery">
+<img src="../static/krysia.jpg" width="300" height="300" alt="Pestka" class="img-fluid" /></a>
+
+<a href="../static/gniewko.jpg" class="data-toggle="lightbox" data-gallery="gallery">
+<img src="../static/gniewko.jpg" width="300" height="300" alt="Pestka" class="img-fluid" /></a>
+
+<a href="../static/prisma.jpg" class="data-toggle="lightbox" data-gallery="gallery">
+<img src="../static/prisma.jpg" width="300" height="300" alt="Pestka" class="img-fluid" /></a>
+
+<a href="../static/05.jpg" class="data-toggle="lightbox" data-gallery="gallery">
+<img src="../static/05.jpg" width="300" height="300" alt="Pestka" class="img-fluid" /></a>
+
+<a href="../static/06.jpg" class="data-toggle="lightbox" data-gallery="gallery">
+<img src="../static/06.jpg" width="300" height="300" alt="Pestka" class="img-fluid" /></a>
+
+<a href="../static/07.jpg" class="data-toggle="lightbox" data-gallery="gallery">
+<img src="../static/07.jpg" width="300" height="300" alt="Pestka" class="img-fluid" /></a>
+
+<a href="../static/08.jpg" class="data-toggle="lightbox" data-gallery="gallery">
+<img src="../static/08.jpg" width="300" height="300" alt="Pestka" class="img-fluid" /></a>
+
+<a href="../static/09.jpg" class="data-toggle="lightbox" data-gallery="gallery">
+<img src="../static/09.jpg" width="300" height="300" alt="Pestka" class="img-fluid" /></a>
+</div>
+</div>
 </body>
 </html>
